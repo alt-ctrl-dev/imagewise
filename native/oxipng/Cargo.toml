@@ -10,3 +10,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 rustler = "0.36.2"
+oxipng = "9.1.5"
+webp = { version = "0.2.1" }
+# Add this line
+image = { version = "0.25", features = ["png"] }
