@@ -1,4 +1,4 @@
-# NIF for ImageProcessor.OxiPNG
+# NIF for ImageWise.ImageProcessor.OxiPNG
 
 ## To build the NIF module:
 
@@ -7,7 +7,7 @@
 ## To load the NIF:
 
 ```elixir
-defmodule ImageProcessor.OxiPNG do
+defmodule ImageWise.ImageProcessor.OxiPNG do
   use Rustler, otp_app: :imagewise, crate: "oxipng"
 
   # When your NIF is loaded, it will override this function.
