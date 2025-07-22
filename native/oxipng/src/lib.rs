@@ -1,6 +1,6 @@
 #[rustler::nif]
 fn add(a: i64, b: i64) -> i64 {
-    a + b
+    a + b 
 }
 
-rustler::init!("Elixir.ImageWise.ImageProcessor.OxiPNG");
+rustler::init!("Elixir.Imagewise.ImageProcessor.OxiPNG");
