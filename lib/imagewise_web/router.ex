@@ -25,7 +25,7 @@ defmodule ImagewiseWeb.Router do
   #   pipe_through :api
   # end
 
-  # Enable LiveDashboard in development
+  # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:imagewise, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
@@ -38,6 +38,7 @@ defmodule ImagewiseWeb.Router do
       pipe_through :browser
 
       live_dashboard "/dashboard", metrics: ImagewiseWeb.Telemetry
+      forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
 end

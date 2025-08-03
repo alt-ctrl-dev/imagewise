@@ -4,8 +4,14 @@ import Config
 # you can enable the server option below.
 config :imagewise, ImagewiseWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "ilcxbuHEDLFeT/wZrmaOPxaC0flu0jDkeOaCF24BH8DrkKrB9ORNDP4HAgaMf28Y",
+  secret_key_base: "WVj3J/ruK68nVNFFlbfNBJiXLKLVMohFCGksiDKgWNtzinK/YzBkVPtADcI+6ah7",
   server: false
+
+# In test we don't send emails
+config :imagewise, Imagewise.Mailer, adapter: Swoosh.Adapters.Test
+
+# Disable swoosh api client as it is only required for production adapters
+config :swoosh, :api_client, false
 
 # Print only warnings and errors during test
 config :logger, level: :warning
