@@ -11,3 +11,4 @@ erl_crash.dump
 
 # Rust binary artifacts
 /target/
+.DS_store
